@@ -1,0 +1,12 @@
+# App files and folders
+__pycache__
+.coverage
+.env
+.pytest_cache
+coverage
+venv
+
+# OS and IDE files and folders
+.idea
+.vscode
+nbproject

@@ -1,0 +1,42 @@
+version: '3.8'
+services:
+  db:
+    image: mysql:5.7
+    container_name: mysql-default
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'db'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'password'
+      MYSQL_ROOT_PASSWORD: 'password'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - default-db:/var/lib/mysql
+    networks:
+      - api-server
+      
+  fast-api:
+    container_name: mr-crowley
+    restart: always
+    depends_on:
+      - db
+    env_file:
+      - ./docker-env
+    ports:
+      - "8000:8000"
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    networks:
+      - api-server
+
+volumes:
+  default-db:
+
+networks:
+  api-server:
+    external: false
+    name: api-server

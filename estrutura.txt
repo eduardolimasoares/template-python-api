@@ -1,0 +1,60 @@
+.
+|____app
+| |____models
+| | |______all_models.py
+| | |____User.py
+| | |______pycache__
+| | | |______all_models.cpython-39.pyc
+| | | |____User.cpython-39.pyc
+| |______init__.py
+| |____api
+| | |____endpoints
+| | | |____user.py
+| | | |______pycache__
+| | | | |____user.cpython-39.pyc
+| | |______pycache__
+| | | |____api.cpython-39.pyc
+| | |____api.py
+| |____core
+| | |____deps.py
+| | |______pycache__
+| | | |____auth.cpython-39.pyc
+| | | |____security.cpython-39.pyc
+| | | |____deps.cpython-39.pyc
+| | | |____configs.cpython-39.pyc
+| | | |____database.cpython-39.pyc
+| | |____auth.py
+| | |____security.py
+| | |____database.py
+| | |____configs.py
+| |____exceptions
+| | |____http_exceptions.py
+| | |______pycache__
+| | | |____http_exceptions.cpython-39.pyc
+| | |____auth_exceptions.py
+| |______pycache__
+| | |______init__.cpython-39.pyc
+| |____services
+| |____dev
+| |____schemas
+| | |____user_schema.py
+| | |______pycache__
+| | | |____user_schema.cpython-39.pyc
+|____main.py
+|____estrutura.txt
+|____.gitignore
+|____create_db.py
+|____migrations
+| |____001_create_user_status.py
+| |______pycache__
+| | |____001_create_user_status.cpython-39.pyc
+|____docker-compose.yml
+|____.env
+|____docker
+|____test
+| |____test_app.py
+| |______pycache__
+| | |____test_app.cpython-39-pytest-7.3.1.pyc
+|____Dockerfile
+|____requirements.txt
+|____yoyo.ini
